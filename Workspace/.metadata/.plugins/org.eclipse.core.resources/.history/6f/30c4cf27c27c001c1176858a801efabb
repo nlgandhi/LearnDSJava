@@ -1,0 +1,16 @@
+package LernDS;
+import java.util.*;
+
+public class QueueExample {
+
+	public static void QueueTest1() {
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+	
+}
