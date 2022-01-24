@@ -3,9 +3,7 @@ import java.util.*;
 
 public class ArrayListExample {
 
-	// A vector provides us with dynamic arrays in Java. 
-	// Though, it may be slower than standard arrays but can be helpful in programs where lots 
-	// of manipulation in the array is needed. 
+	
 	public static void VectorTest() {
 		
 	    // Declaring the Vector
@@ -60,8 +58,7 @@ public class ArrayListExample {
 	}
 	
 	public static void main(String[] args) {
-//		 ArrayListTest1();
-		 VectorTest();
+		 ArrayListTest1();
 		 
 	}
 

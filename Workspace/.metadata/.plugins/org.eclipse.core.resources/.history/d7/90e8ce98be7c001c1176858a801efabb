@@ -60,8 +60,7 @@ public class ArrayListExample {
 	}
 	
 	public static void main(String[] args) {
-//		 ArrayListTest1();
-		 VectorTest();
+		 ArrayListTest1();
 		 
 	}
 
