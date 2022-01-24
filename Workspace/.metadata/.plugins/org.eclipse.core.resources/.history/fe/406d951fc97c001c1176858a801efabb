@@ -42,9 +42,7 @@ public class HashExample {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// HastSetTest1();	
-		HastMapTest1();
-		
+		HastSetTest1();		
 	}
 
 }
