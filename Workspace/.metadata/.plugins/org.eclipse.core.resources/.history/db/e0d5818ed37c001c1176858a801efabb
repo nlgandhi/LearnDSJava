@@ -10,8 +10,10 @@ public class HashExample {
         // Generic type twice
         Hashtable<Integer, String> ht1 = new Hashtable<>();
   
-        // Initialization of a Hashtable using Generics
-        Hashtable<Integer, String> ht2 = new Hashtable<Integer, String>();
+        // Initialization of a Hashtable
+        // using Generics
+        Hashtable<Integer, String> ht2
+            = new Hashtable<Integer, String>();
   
         // Inserting the Elements
         // using put() method
@@ -69,8 +71,7 @@ public class HashExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// HastSetTest1();	
-		// HastMapTest1();
-		HashTableTest1();
+		HastMapTest1();
 		
 	}
 
