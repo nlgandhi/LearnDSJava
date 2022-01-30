@@ -49,9 +49,8 @@ public class Easy1 {
 	
 	
 	// Brute Force Approch using two for loops.
-	// Time complexity: O(n^2)O(n 2). For each element, we try to find its complement by looping through the rest of the array which takes O(n)O(n) time. Therefore, the time complexity is O(n^2)O(n 2 ).
-    // We can reduce the lookup time from O(n)O(n) to O(1)O(1) by trading space for speed. A hash table is well suited for this purpose because it supports fast lookup in near constant time. 
-	 public static int[] twoSum_sol1(int[] nums, int target) {
+	// O(N-Square) 
+    public static int[] twoSum_sol1(int[] nums, int target) {
         
         for (int i = 0; i < nums.length; i++) {
             //System.out.println(nums[i]);
