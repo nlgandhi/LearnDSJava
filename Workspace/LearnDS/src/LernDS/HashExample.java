@@ -30,6 +30,42 @@ public class HashExample {
 	}
 	
 	
+	//	In the ArrayList chapter, you learned that Arrays store items as an ordered collection, and you have to access 
+	//	them with an index number (int type). A HashMap however, store items in "key/value" pairs, and you can access 
+	// them by an index of another type (e.g. a String).
+	public static void HashMapTest2() { 
+		
+		 // Create a HashMap object called capitalCities
+	    HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+	    // Add keys and values (Country, City)
+	    capitalCities.put("England", "London");
+	    capitalCities.put("Germany", "Berlin");
+	    capitalCities.put("Norway", "Oslo");
+	    capitalCities.put("USA", "Washington DC");
+	    System.out.println(capitalCities);
+	    System.out.println(capitalCities.size());
+	   
+//	    Loop through the items of a HashMap with a for-each loop.
+//	    Note: Use the keySet() method if you only want the keys, and use the values() 
+//	    method if you only want the values:
+	    
+//	    for (String i : capitalCities.keySet()) {
+//    	  System.out.println(i);
+//    	}
+//	    
+//	    // Print values
+//	    for (String i : capitalCities.values()) {
+//	      System.out.println(i);
+//	    }
+	    
+	    // Print keys and values
+	    for (String i : capitalCities.keySet()) {
+	      System.out.println("key: " + i + " value: " + capitalCities.get(i));
+	    }
+	    
+	}
+	
 	public static void HashMapTest1() {
 		
 		HashMap<Integer, String> hm = new HashMap<Integer, String>();
@@ -47,7 +83,7 @@ public class HashExample {
         
 	}
 	
-	
+	// A HashSet is a collection of items where every item is unique, and it is found in the java.util package:
 	public static void HashSetTest1() {
 		
 		 HashSet<String> hs = new HashSet<String>();
@@ -62,15 +98,35 @@ public class HashExample {
 	        Iterator<String> itr = hs.iterator();
 	        while (itr.hasNext()) {
 	            System.out.println(itr.next());
-	        }
-		
+	        }		
 	}
+	
+	public static void HashSetTest2() { 
+		
+		   HashSet<String> cars = new HashSet<String>();
+		    cars.add("Volvo");
+		    cars.add("BMW");
+		    cars.add("Ford");
+		    cars.add("BMW");
+		    cars.add("Mazda");
+		    System.out.println(cars);	
+		    
+		    cars.contains("Mazda");
+		    
+		    for (String i : cars) {
+	    	  System.out.println(i);
+	    	}
+		    
+	}
+
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// HastSetTest1();	
+		HashSetTest2();	
 		// HastMapTest1();
-		HashTableTest1();
+		// HashMapTest2();
+		//HashTableTest1();
 		
 	}
 
