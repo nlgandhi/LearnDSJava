@@ -4,15 +4,7 @@ import java.util.*;
 public class Easy1 {
 
 	 // Check if the number is a Palindrome 
-	 // Special cases:
-     // As discussed above, when x < 0, x is not a palindrome.
-     // Also if the last digit of the number is 0, in order to be a palindrome,
-     // the first digit of the number also needs to be 0.
-	 // Second idea would be reverting the number itself, and then compare the number with original number, 
-	 // if they are the same, then the number is a Palindrome. However, if the reversed number is larger than 
-	 // text{int.MAX}int.MAX, we will hit integer overflow problem.
-	 // When the length is an odd number, we can get rid of the middle digit by revertedNumber/10
-	
+	 // 
 	 public static boolean isPalindrome(int x) {
 	        
 	        if (x < 0) {

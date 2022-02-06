@@ -4,16 +4,8 @@ import java.util.*;
 public class Easy1 {
 
 	 // Check if the number is a Palindrome 
-	 // Special cases:
-     // As discussed above, when x < 0, x is not a palindrome.
-     // Also if the last digit of the number is 0, in order to be a palindrome,
-     // the first digit of the number also needs to be 0.
-	 // Second idea would be reverting the number itself, and then compare the number with original number, 
-	 // if they are the same, then the number is a Palindrome. However, if the reversed number is larger than 
-	 // text{int.MAX}int.MAX, we will hit integer overflow problem.
-	 // When the length is an odd number, we can get rid of the middle digit by revertedNumber/10
-	
-	 public static boolean isPalindrome(int x) {
+	 // 
+	 public boolean isPalindrome(int x) {
 	        
 	        if (x < 0) {
 	            return false;
@@ -25,8 +17,7 @@ public class Easy1 {
 	            x = x /10;
 	        }
 	        
-	        // since the middle digit doesn't matter in palidrome(it will always equal to itself), 
-	        // we can simply get rid of it.        
+	        // since the middle digit doesn't matter in palidrome(it will always equal to itself), we can simply get rid of it.        
 	        if (x ==  revertNumber) {
 	            return true;
 	        } else {
@@ -101,19 +92,11 @@ public class Easy1 {
     }
     
 	public static void main(String[] args) {
-		
-		// Example 1 - Two Sum Test Cases
-//		int[] nums = {2,7,11,15}; 
-//		int[] retIndex =  twoSum_sol3(nums, 9);
-//		System.out.println(retIndex[0]);
-//		System.out.println(retIndex[1]);
-		
-		// Example 2 - Check if a Number is a Palindrome
-		int intTestNumber = 1221;
-		System.out.println(isPalindrome(intTestNumber));
-		
-		
-		
+		// TODO Auto-generated method stub
+		int[] nums = {2,7,11,15}; 
+		int[] retIndex =  twoSum_sol3(nums, 9);
+		System.out.println(retIndex[0]);
+		System.out.println(retIndex[1]);
 	}
 
 }
