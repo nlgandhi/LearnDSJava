@@ -3,6 +3,12 @@ import java.util.*;
 
 public class Easy1 {
 
+	// The indexOf() method returns the position of the first occurrence of specified character(s) in a string.
+	// Tip: Use the lastIndexOf method to return the position of the last occurrence of specified character(s) in a string.
+
+
+	
+	
 	 // Check if the number is a Palindrome 
 	 // Special cases:
      // As discussed above, when x < 0, x is not a palindrome.
