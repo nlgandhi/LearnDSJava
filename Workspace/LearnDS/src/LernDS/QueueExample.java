@@ -3,6 +3,15 @@ import java.util.*;
 
 public class QueueExample {
 
+	// Priority Queue is an abstract data type, which is similar to a queue, 
+	// however, in the priority queue, every element has some priority. 
+	/*
+	 * Every item has a priority associated with it. An element with high priority
+	 * is dequeued before an element with low priority.
+	 * A priority queue is typically implemented using Heap data structure.
+	 */
+	
+	
 	public static void QueueTest1() {
 		
 		// Creating empty priority queue
@@ -58,12 +67,33 @@ public class QueueExample {
 		
 	}
 	
+	//	  Deque Interface: This is a very slight variation of the queue data structure. 
+	//	  Deque, also known as a double-ended queue, is a data structure where we can add and remove the elements 
+	//	  from both ends of the queue. 
+	public static void ArrayDequeTest() {
+		
+		// Initializing an deque
+        ArrayDeque<Integer> de_que = new ArrayDeque<Integer>(10);
+        de_que.add(10);
+        de_que.add(20);
+        de_que.add(30);
+        de_que.add(40);
+        
+        System.out.println(de_que);
+        de_que.clear();
+        
+        
+        
+        
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		
 		//QueueTest1();
+		// QueueTest2();
 		QueueTest2();
-		
 		
 	}
 	
