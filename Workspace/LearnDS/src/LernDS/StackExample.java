@@ -16,6 +16,10 @@ public class StackExample {
 		openingParanSet.addAll(matchingParanMap.values());
 	}
 	
+	// --------------------------------------------------------------------
+	// Basically every time you find an opening bracket push it to a stack
+	// Every time you see a Matching closing bracket pop the opening bracket it from the stack.
+	// --------------------------------------------------------------------
 	public static boolean HasMatchParameters(String input) {
 		
 		try {
@@ -23,15 +27,18 @@ public class StackExample {
 			for (int i=0; i < input.length(); i++) {	
 				char ch = input.charAt(i);
 				// System.out.println(ch);
-				// Add to the stack for an opening paren
+				
+				// If you find an opening element add it to the stack.
 				if (openingParanSet.contains(ch)) {
 					parenStack.push(ch);
 					//System.out.println(parenStack.peek());
-				}
-				// START HERE 
+				}				
 				
+				// If you find a closing bracket. Pop the stack to see if it 
+				// holds the correct opening bracket.
 				if (matchingParanMap.containsKey(ch)) {
 					Character lastParen = parenStack.pop();
+					// If there is a mismatch return False
 					if (lastParen != matchingParanMap.get(ch)) {
 						return false;
 					}
@@ -39,6 +46,7 @@ public class StackExample {
 					
 			}
 			return parenStack.isEmpty();	
+			
 		} catch (StackOverflowError soe) {
 			System.err.println("Stack Overfow");
 		}
@@ -46,7 +54,7 @@ public class StackExample {
 	}
 	
 	// The class is based on the basic principle of last-in-first-out. (LIFO)
-	public static void StackTest1() {
+	public static void StackBasics() {
 		
 		 Stack<String> stack = new Stack<String>();
 	        stack.push("Priya");
@@ -78,8 +86,14 @@ public class StackExample {
 	
 	public static void main(String[] args) {
 		
-		//StackTest1();
-		HasMatchParameters("{H[]ello}");
+		//StackBasics();
+		
+		boolean blnTest = HasMatchParameters("{H[]ell()o}");
+		if (blnTest) {
+			System.out.println("Well Formed String - All brackets match");
+		} else {
+			System.out.println("Not Well Formed String - Brackets do not match");						
+		}
 		
 	}
 	
